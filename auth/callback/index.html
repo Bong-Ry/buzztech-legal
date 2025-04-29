@@ -1,0 +1,11 @@
+<!DOCTYPE html><meta charset="utf-8">
+<title>Callback</title>
+<h3>Callback received!</h3>
+<p id="code"></p>
+<script>
+  const params = new URLSearchParams(location.search);
+  document.getElementById('code').textContent = 'Auth code: ' + params.get('code');
+  // ↓ダミーで API 結果っぽいリストを表示
+  document.body.insertAdjacentHTML('beforeend',
+    '<h4>Latest videos (mock)</h4><ul><li>Video A</li><li>Video B</li><li>Video C</li></ul>');
+</script>
